@@ -1,5 +1,4 @@
 * {
-  font-family: "Bigilla";
   margin: 0%;
   padding: 0%;
   -webkit-box-sizing: border-box;
@@ -12,22 +11,22 @@ html, body {
 }
 
 #main {
+  overflow-y: hidden;
   width: 100%;
   min-height: 200%;
   background-color: #232c2b;
+  background-image: url("../Untitled-1.png");
 }
 
 #home {
+  overflow-y: hidden;
   width: 100%;
   height: 100%;
 }
 
-#home img {
-  position: absolute;
+#home #content {
   width: 100%;
-  min-height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 100vh;
 }
 
 #home #big-circle {
@@ -36,6 +35,7 @@ html, body {
   border-radius: 50%;
   border: 1px dashed #e8e99628;
   position: absolute;
+  z-index: 1;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -67,6 +67,7 @@ html, body {
 }
 
 #home #text {
+  font-family: "Hello Paris Sans Regular";
   z-index: 2;
   position: absolute;
   top: 50%;
@@ -86,10 +87,13 @@ html, body {
 #home #text h1 {
   color: #e9ab96;
   font-weight: 100;
-  text-transform: uppercase;
   text-align: center;
-  font-size: 12vw;
-  line-height: 7.5vw;
+  font-size: 15vw;
+  line-height: 8vw;
+}
+
+#home #text h1 span {
+  display: inline-block;
 }
 
 #home #circle {
@@ -99,16 +103,16 @@ html, body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 20vw;
-  height: 20vw;
+  width: 30vw;
+  height: 30vw;
   border-radius: 50%;
   background-color: red;
   overflow: hidden;
 }
 
 #home #circle img {
-  width: 20vw;
-  height: 20vw;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -117,16 +121,19 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  position: absolute;
   padding: 4vw 10vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  top: 0%;
+  left: 0%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
   height: 5vw;
+  font-family: "BIGILLA";
 }
 
 #home #nav #nleft {
@@ -136,6 +143,7 @@ html, body {
 }
 
 #home #nav #nleft h3 {
+  font-family: "BIGILLA";
   text-decoration: underline;
   color: #e9ab96;
   margin-right: 1vw;
@@ -149,6 +157,7 @@ html, body {
 }
 
 #home #nav #nright h3 {
+  font-family: "BIGILLA";
   font-size: 0.9vw;
   text-decoration: underline;
   color: #e9ab96;
@@ -157,6 +166,7 @@ html, body {
 
 #home #nav #ncenter {
   position: absolute;
+  font-family: "BIGILLA";
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -165,7 +175,7 @@ html, body {
 
 #home #nav #ncenter h2 {
   font-size: 2.5vw;
-  font-weight: 100;
+  font-weight: 090;
   color: #f73e06;
 }
 
@@ -178,7 +188,7 @@ html, body {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  top: 85%;
+  top: 87%;
   left: 50%;
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
@@ -204,13 +214,218 @@ html, body {
 
 #home #mentions #m1 h1, #home #mentions #m2 h1, #home #mentions #m3 h1 {
   color: #f73e06;
-  margin: -60px;
-  font-size: 6vw;
+  margin: -30px;
+  font-size: 4vw;
   font-weight: 100;
 }
 
 #home #mentions #m1 h2, #home #mentions #m2 h2, #home #mentions #m3 h2 {
   font-weight: 100;
+  font-size: 1.3vw;
   text-decoration: underline;
+}
+
+#second {
+  z-index: 99;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  min-width: 100vh;
+}
+
+#second #text {
+  position: absolute;
+  color: #e9ab96;
+  position: absolute;
+  top: 55%;
+  font-family: "Bigilla";
+  font-weight: 900;
+  z-index: 2;
+  white-space: nowrap;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 5vw;
+}
+
+#second #scroller {
+  position: relative;
+  margin-top: 90px;
+  overflow: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+#second #scroller::-webkit-scrollbar {
+  display: none;
+}
+
+#second #scroller #images {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 30vw;
+  height: 40vw;
+  background-color: pink;
+}
+
+#second #scroller #images img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#third {
+  margin-top: 10%;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#third #elem {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#third #elem #one {
+  position: relative;
+  width: 85%;
+  height: 100vh;
+  background-color: #1f3b2e;
+}
+
+#third #elem #one h1 {
+  white-space: nowrap;
+  font-family: "bigilla";
+  position: absolute;
+  top: 8%;
+  left: -2%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+#third #elem #two {
+  width: 5%;
+  height: 100vh;
+  background-color: #294129;
+  position: relative;
+}
+
+#third #elem #two h1 {
+  font-family: "bigilla";
+  position: absolute;
+  top: 8%;
+  white-space: nowrap;
+  left: -20%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+#third #elem #three {
+  position: relative;
+  width: 5%;
+  height: 100vh;
+  background-color: #40502a;
+}
+
+#third #elem #three h1 {
+  white-space: nowrap;
+  font-family: "bigilla";
+  position: absolute;
+  top: 8%;
+  left: -20%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+#third #elem #four {
+  position: relative;
+  width: 5%;
+  height: 100vh;
+  background-color: #555527;
+}
+
+#third #elem #four h1 {
+  white-space: nowrap;
+  font-family: "bigilla";
+  position: absolute;
+  top: 8%;
+  left: -20%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+#fourth {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #111111;
+}
+
+#fourth #links {
+  height: 70vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  position: absolute;
+  left: 10%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  top: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#fourth #links h1 {
+  font-size: 5vw;
+  cursor: pointer;
+  color: #727272;
+  font-family: "Bigilla";
+}
+
+#fourth #links h1:hover {
+  color: white;
+}
+
+#fourth #img1, #fourth #img2, #fourth #img3, #fourth #img4 {
+  position: absolute;
+  right: 0%;
+  width: 60%;
+  top: 10%;
+  height: 100vh;
+  height: 100%;
+}
+
+#fourth #img1 img:nth-child(1), #fourth #img2 img:nth-child(1), #fourth #img3 img:nth-child(1), #fourth #img4 img:nth-child(1) {
+  -webkit-transform: rotate(-10deg) translateX(-30px);
+          transform: rotate(-10deg) translateX(-30px);
+  width: 400px;
+}
+
+#fourth #img1 img:nth-child(2), #fourth #img2 img:nth-child(2), #fourth #img3 img:nth-child(2), #fourth #img4 img:nth-child(2) {
+  -webkit-transform: rotate(5deg) translateX(100px);
+          transform: rotate(5deg) translateX(100px);
+  width: 400px;
+}
+
+#fourth #img1 img:nth-child(3), #fourth #img2 img:nth-child(3), #fourth #img3 img:nth-child(3), #fourth #img4 img:nth-child(3) {
+  width: 300px;
+  -webkit-transform: rotate(-1deg) translateX(-600px) translateY(200px);
+          transform: rotate(-1deg) translateX(-600px) translateY(200px);
+}
+
+#fourth #img1 img, #fourth #img2 img, #fourth #img3 img, #fourth #img4 img {
+  opacity: 0;
 }
 /*# sourceMappingURL=style.css.map */
